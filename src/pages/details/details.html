@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>{{quoteGroup.category | uppercase}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let quote of quoteGroup.airports">
+	  <img src="../assets/img/card-sf.png"/>
+	  <ion-card-content>
+	  	<ion-avatar text-right>
+	     <h1>{{quote.code | uppercase}}</h1>
+	    </ion-avatar>
+
+	    <ion-card-title>
+	     #{{quote.id | uppercase}}
+	      </ion-card-title>
+	    <p>{{quote.name | uppercase}}</p>
+	  </ion-card-content>
+	  <ion-row>
+	  	<ion-col text-right>
+	  		<button ion-button clear small (click)="onAddToMyList(quote)">
+	  			<ion-icon name="heart" padding-right></ion-icon>Add to my list</button>
+	  	</ion-col>
+	  </ion-row>
+	</ion-card>
+</ion-content>
