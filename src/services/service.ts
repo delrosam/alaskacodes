@@ -18,4 +18,11 @@ export class CodesService {
 	getFavoriteCodes(){
 		return this.favoriteCodes.slice();
 	}
+
+
+	isCodeFavorite(code: Airport){
+		return this.favoriteCodes.find((codeEl: Airport) => {
+			return codeEl.id == code.id;
+		});
+	}
 }

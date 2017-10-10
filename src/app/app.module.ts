@@ -5,10 +5,12 @@ import { MyApp } from './app.component';
 
 import { LibraryPage } from '../pages/library/library';
 import { FavoritesPage } from '../pages/favorites/favorites';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailsPage } from '../pages/details/details';
+import { DetailPage } from '../pages/detail/detail';
 import { CodesService } from '../services/service';
+import { SettingsPage } from '../pages/settings/settings';
+import { SettingsService } from '../services/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,9 +20,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LibraryPage,
     FavoritesPage,
-    HomePage,
     TabsPage,
-    DetailsPage
+    DetailsPage,
+    DetailPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -31,15 +34,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LibraryPage,
     FavoritesPage,
-    HomePage,
     TabsPage,
-    DetailsPage
+    DetailsPage,
+    DetailPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CodesService
+    CodesService,
+    SettingsService
   ]
 })
 export class AppModule {}

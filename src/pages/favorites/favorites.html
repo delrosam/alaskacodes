@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
       List of Favorites
     </ion-title>
@@ -8,9 +13,20 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let code of codes">
-      <h2>{{code.code}}</h2>
-      <p>{{code.name}}</p>
+    <ion-item-sliding *ngFor="let code of codes">
+      <ion-item 
+      [color]="getBackground()"
+      (click)="onViewAirport(code)">
+      <h2>{{code.airportcode | uppercase}}</h2>
+      <p>{{code.airportname}}</p>
     </ion-item>
+    <ion-item-options>
+      <button ion-button color="danger"
+      (click)="onDeleteFromMyList(code)">
+        <ion-icon name="trash"></ion-icon>
+        Delete
+      </button>
+    </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

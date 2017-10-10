@@ -40,4 +40,13 @@ export class DetailsPage implements OnInit{
  	alert.present();
  }
 
+
+ onDeleteFromMyList(code: Airport){
+ 	this.codeServ.removeCodeFromFavorites(code);
+ }
+
+ isFavorite(code: Airport){
+ 	return this.codeServ.isCodeFavorite(code);
+ }
+
 }
