@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Alaska Airlines Flashcard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <flash-card>
+    <div class="flash-card-front">{{randomQuote.code}}</div>
+    <div class="flash-card-back">{{randomQuote.city}}</div>
+  </flash-card>
+  <button ion-button color="secondary" block (click)="pickACard()">Next</button>
+</ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { LibraryPage } from '../library/library';
 import { FavoritesPage } from '../favorites/favorites';
+import { FlashcardPage } from '../flashcard/flashcard';
 
 
 @Component({
@@ -9,8 +10,9 @@ import { FavoritesPage } from '../favorites/favorites';
 })
 export class TabsPage {
 
-  tab1Root = FavoritesPage;
-  tab2Root = LibraryPage;
+  tab1Root = FlashcardPage;
+  tab2Root = FavoritesPage;
+  tab3Root = LibraryPage;
 
   constructor() {
 

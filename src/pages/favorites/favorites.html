@@ -6,7 +6,7 @@
       </button>
     </ion-buttons>
     <ion-title>
-      List of Favorites
+      My Favorite Airports
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -17,8 +17,11 @@
       <ion-item 
       [color]="getBackground()"
       (click)="onViewAirport(code)">
+      <ion-avatar item-start>
+        <img src="../assets/img/{{code.image}}.jpg">
+      </ion-avatar>
       <h2>{{code.airportcode | uppercase}}</h2>
-      <p>{{code.airportname}}</p>
+      <p>{{code.airportname | uppercase}}</p>
     </ion-item>
     <ion-item-options>
       <button ion-button color="danger"
