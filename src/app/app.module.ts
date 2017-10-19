@@ -16,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FlashcardPage } from '../pages/flashcard/flashcard';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
+import { BasicPage } from '../pages/basic/basic';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     DetailPage,
     SettingsPage,
     FlashcardPage,
-    FlashCardComponent
+    FlashCardComponent,
+    BasicPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     DetailsPage,
     DetailPage,
     SettingsPage,
-    FlashcardPage
+    FlashcardPage,
+    BasicPage
   ],
   providers: [
     StatusBar,

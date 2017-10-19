@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { BasicPage } from '../pages/basic/basic';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  basicPage = BasicPage;
   tabsPage = TabsPage;
   settingsPage = SettingsPage;
   @ViewChild('nav') nav: NavController;
