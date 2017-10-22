@@ -1,16 +1,17 @@
-import { Airport } from "../data/airports.interface";
+// import { Airport } from "../data/airports.interface";
+import { Codes } from "../data/airportcodes.interface";
 
 export class CodesService {
-	private favoriteCodes: Airport[] = [];
+	private favoriteCodes: Codes[] = [];
 
-	addCodeToFavorites(code: Airport){
+	addCodeToFavorites(code: Codes){
 		this.favoriteCodes.push(code);
 		console.log(this.favoriteCodes);
 	}
 
-	removeCodeFromFavorites(code: Airport){
-		const position = this.favoriteCodes.findIndex((codeEl: Airport) => {
-			return codeEl.id == code.id;
+	removeCodeFromFavorites(code: Codes){
+		const position = this.favoriteCodes.findIndex((codeEl: Codes) => {
+			return codeEl.airportcode == code.airportcode;
 		});
 		this.favoriteCodes.splice(position, 1);
 	}
@@ -20,9 +21,9 @@ export class CodesService {
 	}
 
 
-	isCodeFavorite(code: Airport){
-		return this.favoriteCodes.find((codeEl: Airport) => {
-			return codeEl.id == code.id;
+	isCodeFavorite(code: Codes){
+		return this.favoriteCodes.find((codeEl: Codes) => {
+			return codeEl.airportcode == code.airportcode;
 		});
 	}
 }

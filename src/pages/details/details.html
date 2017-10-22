@@ -2,33 +2,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title text-center>{{quoteGroup.category | uppercase}}</ion-title>
+    <ion-title text-center>{{individualAirport.airportcode | uppercase}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-	<ion-card *ngFor="let quote of quoteGroup.airports">
-	  <img src="../assets/img/{{quote.image}}.jpg"/>
+	<ion-card>
+	  <img src="../assets/img/{{individualAirport.airportcode}}.jpg"/>
 	  <ion-card-content>
 	  	<ion-avatar text-right>
-	     <h1>{{quote.airportcode | uppercase}}</h1>
+	     <h1>{{individualAirport.airportcode | uppercase}}</h1>
 	    </ion-avatar>
 
 	    <ion-card-title>
-	     {{quote.airportname | uppercase}}
+	     {{individualAirport.airportname | uppercase}}
 	      </ion-card-title>
-	    <p>{{quote.city | uppercase}}, {{quote.state | uppercase}}</p>
-	    <p>{{quote.countryfull | uppercase}}</p>
+	    <p>{{individualAirport.city | uppercase}}, {{individualAirport.state | uppercase}}</p>
+	    <p>{{individualAirport.countryfull | uppercase}}</p>
 	  </ion-card-content>
 	  <ion-row>
 	  	<ion-col text-right>
-	  		<button ion-button clear small (click)="onAddToMyList(quote)"
-	  		*ngIf="!isFavorite(quote)">
+	  		<button ion-button clear small (click)="onAddToMyList(individualAirport)"
+	  		*ngIf="!isFavorite(individualAirport)">
 	  			<ion-icon name="heart" padding-right></ion-icon>Add to my list</button>
-	  		<button ion-button clear small (click)="onDeleteFromMyList(quote)"
-	  		*ngIf="isFavorite(quote)" color="danger">
+	  		<button ion-button clear small (click)="onDeleteFromMyList(individualAirport)"
+	  		*ngIf="isFavorite(individualAirport)" color="danger">
 	  			<ion-icon name="trash" padding-right></ion-icon>Remove from my list</button>
 	  	</ion-col>
 	  </ion-row>

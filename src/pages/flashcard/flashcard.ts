@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-flashcard',
@@ -14,15 +14,11 @@ export class FlashcardPage {
 
       }
 
-
-
-      
       ionViewWillLoad(){
-        this.pickACard();
+        this.nextCard();
       }
 
-
-      pickACard(){
+      nextCard(){
         this.myCodes = [
           { code: "ABQ", city: "Albuquerque" },
           { code: "ACV", city: "Eureka" },
@@ -161,5 +157,6 @@ export class FlashcardPage {
         return this.randomQuote;
 
       }
+
 
 }

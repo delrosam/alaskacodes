@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quiz</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-item *ngFor="let quoteGroup of quoteCollection">
+        <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
+        <h2>{{ quoteGroup.category | uppercase }}</h2>
+        <p>{{ quoteGroup.airports.length }} Airports</p>
+      </button>
+</ion-content>

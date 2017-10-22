@@ -1,22 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, AlertController } from 'ionic-angular';
-import { Airport } from '../../data/airports.interface';
-import { CodesService } from '../../services/service';
 
-@IonicPage()
+import { CodesService } from '../../services/service';
+import { Codes } from '../../data/airportcodes.interface';
+
+
 @Component({
   selector: 'page-details',
   templateUrl: 'details.html',
 })
 export class DetailsPage implements OnInit{
-  quoteGroup: {category: string, airports: Airport[], icon: string};
-  constructor(private navParams:NavParams, private alertCtrl: AlertController, private codeServ: CodesService){}
+
+  individualAirport: Codes[];
+
+  constructor(	private navParams:NavParams, 
+				private alertCtrl: AlertController, 
+				private codeServ: CodesService){}
 
  ngOnInit(){
-	this.quoteGroup = this.navParams.data;
+	this.individualAirport = this.navParams.data;
  } 
 
- onAddToMyList(selectedCode: Airport){
+ onAddToMyList(selectedCode: Codes){
  	const alert = this.alertCtrl.create({
  		title: "Add To List",
  		message: 'Are you sure you want to add this airport code to your list?',
@@ -41,11 +46,11 @@ export class DetailsPage implements OnInit{
  }
 
 
- onDeleteFromMyList(code: Airport){
+ onDeleteFromMyList(code: Codes){
  	this.codeServ.removeCodeFromFavorites(code);
  }
 
- isFavorite(code: Airport){
+ isFavorite(code: Codes){
  	return this.codeServ.isCodeFavorite(code);
  }
 

@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { LibraryPage } from '../library/library';
 import { FavoritesPage } from '../favorites/favorites';
 import { FlashcardPage } from '../flashcard/flashcard';
+import { QuizPage } from '../quiz/quiz';
+import { AirportlistPage } from '../airportlist/airportlist';
 
 
 @Component({
@@ -11,8 +13,9 @@ import { FlashcardPage } from '../flashcard/flashcard';
 export class TabsPage {
 
   tab1Root = FlashcardPage;
-  tab2Root = FavoritesPage;
-  tab3Root = LibraryPage;
+  tab2Root = AirportlistPage;
+  tab3Root = QuizPage;
+  tab4Root = FavoritesPage;
 
   constructor() {
 

@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Alaska Airlines Flashcard</ion-title>
+    <ion-title>Flashcards</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,5 +12,16 @@
     <div class="flash-card-front">{{randomQuote.code}}</div>
     <div class="flash-card-back">{{randomQuote.city}}</div>
   </flash-card>
-  <button ion-button color="secondary" block (click)="pickACard()">Next</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+          
+      </ion-col>
+      <ion-col col-4></ion-col>
+      <ion-col col-4>
+          <button ion-button clear (click)="nextCard()" icon-right>Next<ion-icon name="arrow-dropright-circle"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>

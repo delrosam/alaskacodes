@@ -13,11 +13,11 @@ export class DetailPage {
 	city: string;
 	state: string;
 	countryfull: string;
-	image: string;
+	// image: string;
 
-	constructor (private viewCtrl: ViewController,
-	private navParams: NavParams){
-
+	constructor (
+		private viewCtrl: ViewController,
+		private navParams: NavParams){
 	}
 
 	ionViewDidLoad(){
@@ -26,7 +26,7 @@ export class DetailPage {
 		this.city = this.navParams.get('city');
 		this.state = this.navParams.get('state');
 		this.countryfull = this.navParams.get('countryfull');
-		this.image = this.navParams.get('image');
+		// this.image = this.navParams.get('image');
 	}
 
 	onClose(remove = false){

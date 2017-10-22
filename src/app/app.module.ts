@@ -16,7 +16,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FlashcardPage } from '../pages/flashcard/flashcard';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
+import { QuizPage } from '../pages/quiz/quiz';
+import { AirportlistPage } from '../pages/airportlist/airportlist';
 import { BasicPage } from '../pages/basic/basic';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { BasicPage } from '../pages/basic/basic';
     SettingsPage,
     FlashcardPage,
     FlashCardComponent,
+    QuizPage,
+    AirportlistPage,
     BasicPage
   ],
   imports: [
@@ -45,6 +50,8 @@ import { BasicPage } from '../pages/basic/basic';
     DetailPage,
     SettingsPage,
     FlashcardPage,
+    QuizPage,
+    AirportlistPage,
     BasicPage
   ],
   providers: [
