@@ -9,9 +9,28 @@
 
 
 <ion-content padding>
-    <button ion-item *ngFor="let quoteGroup of quoteCollection">
-        <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
-        <h2>{{ quoteGroup.category | uppercase }}</h2>
-        <p>{{ quoteGroup.airports.length }} Airports</p>
-      </button>
+    <ion-slides #slides>
+        
+        <ion-slide>
+            <h3 text-center>Select code to match the city:</h3>
+            <h1>{{ randomQuiz.city }}</h1>
+
+            <ion-list no-lines radio-group>
+                <ion-item>
+                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a1)">{{ randomQuiz.a1 }}</button>
+                </ion-item>
+                <ion-item >
+                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a2)">{{ randomQuiz.a2 }}</button>
+                </ion-item>
+                <ion-item >
+                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a3)">{{ randomQuiz.a3 }}</button>
+                </ion-item>
+                <ion-item >
+                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a4)">{{ randomQuiz.a4 }}</button>
+                </ion-item>
+            </ion-list>
+
+        </ion-slide>
+          
+    </ion-slides>
 </ion-content>

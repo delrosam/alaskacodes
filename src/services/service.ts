@@ -4,6 +4,7 @@ import { Codes } from "../data/airportcodes.interface";
 export class CodesService {
 	private favoriteCodes: Codes[] = [];
 
+
 	addCodeToFavorites(code: Codes){
 		this.favoriteCodes.push(code);
 		console.log(this.favoriteCodes);
@@ -26,4 +27,9 @@ export class CodesService {
 			return codeEl.airportcode == code.airportcode;
 		});
 	}
+
+
+
+
+
 }

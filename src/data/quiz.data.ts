@@ -1,61 +1,40 @@
 export default [
     {
-      question: 'pacific northwest',
-      answers: [
+      question: 'Seattle',
+      choices: [
         {
-          id:'1',
-          airportname: "seattle tacoma international",
-          city: "Seattle",
           airportcode: "sea"
         },
         {
-          id:'2',
-          airportname: "gowen field",
-          city: "Boise",
           airportcode: "boi"
         },
         {
-          id:"3",
-          airportname: "portland international",
-          city: "Portland",
           airportcode: "pdx"
         }
       ],
-      icon: 'cloudy'
+      correct: 'cloudy'
     },
     {
       question: 'southern california',
-      answers: [
+      choices: [
         {
-          id:"16",
-          airportname: "santa barbara municipal",
-          city: "Santa Barbara",
           airportcode: "sba"
         },
         {
-          id:"17",
-          airportname: "san luis obispo regional",
-          city: "San Luis Obispo",
           airportcode: "sbp"
         },
         {
-          id:"18",
-          airportname: "hollywood burbank",
-          city: "Burbank",
           airportcode: "bur"
         },
         {
-          id:"19",
-          airportname: "los angeles international",
-          city: "Los Angeles",
           airportcode: "lax"
         }
       ],
-      icon: 'sunny'
+      correct: 'sunny'
     },
     {
       question: 'northern california',
-      answers: [
+      choices: [
         {
           id:"23",
           airportname: "fresno yosemite international",
@@ -81,7 +60,7 @@ export default [
           airportcode: "oak"
         }
       ],
-      icon: 'bicycle'
+      correct: 'bicycle'
     }
   ];
   

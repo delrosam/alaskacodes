@@ -28,6 +28,7 @@ export class AirportlistPage{
     this.airportCollection = allAirports;
   }
 
+  
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
