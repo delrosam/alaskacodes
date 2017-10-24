@@ -1,9 +1,16 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Quiz</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-buttons start>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>
+          Quiz
+        </ion-title>
+      </ion-navbar>
 
 </ion-header>
 
@@ -12,21 +19,21 @@
     <ion-slides #slides>
         
         <ion-slide>
-            <h3 text-center>Select code to match the city:</h3>
-            <h1>{{ randomQuiz.city }}</h1>
+            <h5 text-center>Select CODE that matches the city:</h5>
+            <h1 class="quizCity">{{ randomQuiz.city }}</h1>
 
             <ion-list no-lines radio-group>
                 <ion-item>
-                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a1)">{{ randomQuiz.a1 }}</button>
+                    <button ion-button full large color="secondary" [disabled]="disabled1" (click)="selectAnswer('btn1',randomQuiz.code, randomQuiz.a1)">{{ randomQuiz.a1 }}</button>
                 </ion-item>
                 <ion-item >
-                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a2)">{{ randomQuiz.a2 }}</button>
+                    <button ion-button full large color="secondary" [disabled]="disabled2" (click)="selectAnswer('btn2',randomQuiz.code, randomQuiz.a2)">{{ randomQuiz.a2 }}</button>
                 </ion-item>
                 <ion-item >
-                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a3)">{{ randomQuiz.a3 }}</button>
+                    <button ion-button full large color="secondary" [disabled]="disabled3" (click)="selectAnswer('btn3',randomQuiz.code, randomQuiz.a3)">{{ randomQuiz.a3 }}</button>
                 </ion-item>
                 <ion-item >
-                    <button ion-button full large (click)="selectAnswer(randomQuiz.code, randomQuiz.a4)">{{ randomQuiz.a4 }}</button>
+                    <button ion-button full large color="secondary" [disabled]="disabled4" (click)="selectAnswer('btn4',randomQuiz.code, randomQuiz.a4)">{{ randomQuiz.a4 }}</button>
                 </ion-item>
             </ion-list>
 

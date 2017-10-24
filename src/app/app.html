@@ -6,10 +6,26 @@
 	</ion-header>
 	<ion-content>
 		<ion-list>
-			<button ion-item (click)="onLoad(tabsPage)">
-				<ion-icon name="list-box" item-left></ion-icon>
-				Favorites
+			<button ion-item (click)="onLoad(basicPage)">
+				<ion-icon name="plane" item-left></ion-icon>
+				Splash
 			</button>
+			<button ion-item (click)="onLoad(tabsPage)">
+				<ion-icon name="photos" item-left></ion-icon>
+				Flashcards
+			</button>
+			<!-- <button ion-item (click)="onLoad(airportList)">
+				<ion-icon name="list-box" item-left></ion-icon>
+				Airports
+			</button>
+			<button ion-item (click)="onLoad(quizPage)">
+				<ion-icon name="create" item-left></ion-icon>
+				Quiz
+			</button>
+			<button ion-item (click)="onLoad(favoritesPage)">
+				<ion-icon name="star" item-left></ion-icon>
+				Favorites
+			</button> -->
 			<button ion-item (click)="onLoad(settingsPage)">
 				<ion-icon name="settings" item-left></ion-icon>
 				Settings

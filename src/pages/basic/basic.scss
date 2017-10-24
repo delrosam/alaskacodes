@@ -1,6 +1,11 @@
 page-basic {
+
+  .tutorial-page{
+    background-color:#01638f;
+    color:#fff;
+  }
     .toolbar-background {
-        background: #fff;
+      background-color:#01638f;
         border-color: transparent;
       }
     
@@ -14,8 +19,8 @@ page-basic {
     
       .slide-image {
         max-height: 50%;
-        max-width: 60%;
-        margin: 18px 0;
+        max-width: 75%;
+        margin: 18px 0 0 0;
       }
     
       b {
@@ -26,10 +31,20 @@ page-basic {
         padding: 0 40px;
         font-size: 14px;
         line-height: 1.5;
-        color: #60646B;
+        color: #fff;
     
         b {
-          color: #000000;
+          color: #fff;
         }
+      }
+
+      .bar-button-primary-ios, .bar-button-default.bar-button-ios-primary, .bar-button-clear-ios-primary{
+        color:#fff;
+      }
+      .swiper-pagination-bullet-active{
+        background:#fff;
+      }
+      .button-clear-ios-primary{
+        color:#b3d57d;
       }
 }

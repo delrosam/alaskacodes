@@ -7,6 +7,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { BasicPage } from '../pages/basic/basic';
+import { AirportlistPage } from '../pages/airportlist/airportlist';
+import { QuizPage } from '../pages/quiz/quiz';
+import { FavoritesPage } from '../pages/favorites/favorites';
+import { FlashcardPage } from '../pages/flashcard/flashcard';
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +20,12 @@ import { BasicPage } from '../pages/basic/basic';
 export class MyApp {
   basicPage = BasicPage;
   tabsPage = TabsPage;
+  flashCard = FlashcardPage;
+  airportList = AirportlistPage;
+  quizPage = QuizPage;
+  favoritesPage = FavoritesPage;
   settingsPage = SettingsPage;
+
   @ViewChild('nav') nav: NavController;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private menuCtrl: MenuController) {

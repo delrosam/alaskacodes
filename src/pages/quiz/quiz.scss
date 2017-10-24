@@ -1,9 +1,21 @@
 page-quiz {
-    .correctToast{
-       color:green;
-       font-size:18px;
-       font-weight:bold;
-       text-align:center; 
+
+    .quizCity{
+        color:#B3D57D;
+        font-size:2em;
     }
 
 }
+
+.toast-container .toast-message{
+    font-size:1.2em;
+    font-weight:bold;
+    text-align:center; 
+    color:#01426A;
+ }
+
+ .toast-container{
+    background-color:#B3D57D;
+}
+
+

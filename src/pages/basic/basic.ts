@@ -12,19 +12,14 @@ export class BasicPage {
 
   slides = [
     {
-      title: "Welcome to Marnel's Alaska App!",
-      description: "This is a collection of <b>Alaska Airline</b> Airport Codes to help new hires in memorizing.",
-      image: "assets/img/ica-slidebox-img-1.png",
+      title: "Marnel's Code App!",
+      description: "This is a collection of <b>Alaska Airline</b> <br />Airport Codes to help new hires in memorizing.",
+      image: "assets/img/alaska-logo.jpg",
     },
     {
       title: "What is in the app?",
-      description: "<b>Flash Card</b>: This app will randomly select an entry from the collection to populate the flashcard. Tap the card to display the Code - City pair.<br> Click the <b>Next</b> to randomize selection.",
-      image: "assets/img/ica-slidebox-img-2.png",
-    },
-    {
-      title: "What else?",
-      description: "<b>Code Library</b>: There is also a library of every airport that you can browse and learn more about each airport. Use the <b>Search Bar</b> to look up certain entries. <br /><b>Favorites</b>: Add certain entries to your favorites list.",
-      image: "assets/img/ica-slidebox-img-3.png",
+      description: "1) <b>Flashcards</b><br />2) <b>Airport List</b><br />3) <b>Quiz</b><br />4) <b>Favorite Airports</b>",
+      image: "assets/img/app-content.jpg",
     }
   ];
 }
