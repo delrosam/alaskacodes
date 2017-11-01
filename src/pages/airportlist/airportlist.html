@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="primary">
       <ion-buttons start>
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
@@ -9,16 +9,16 @@
         Airports
       </ion-title>
     </ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>    
   </ion-header>
 
 
-<ion-content padding>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-content padding class="bg-style">
     <ion-list>
         <button ion-item *ngFor="let individualAirport of airportCollection" [navPush]="detailsPage" [navParams]="individualAirport">
           <!-- <ion-icon [name]="individualAirport.icon" item-left></ion-icon> -->
-          <h2>{{ individualAirport.city}}</h2>
-          <p>{{ individualAirport.airportcode  | uppercase }}</p>
+          <h2 style="color:#01426A;">{{ individualAirport.city}}</h2>
+          <p style="color:#B3D57D;">{{ individualAirport.airportcode  | uppercase }}</p>
         </button>
       </ion-list>
 </ion-content>

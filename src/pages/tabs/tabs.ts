@@ -7,6 +7,7 @@ import { QuizPage } from '../quiz/quiz';
 import { AirportlistPage } from '../airportlist/airportlist';
 
 
+
 @Component({
   templateUrl: 'tabs.html'
 })

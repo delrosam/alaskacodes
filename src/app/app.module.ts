@@ -19,6 +19,7 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { QuizPage } from '../pages/quiz/quiz';
 import { AirportlistPage } from '../pages/airportlist/airportlist';
 import { BasicPage } from '../pages/basic/basic';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { BasicPage } from '../pages/basic/basic';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

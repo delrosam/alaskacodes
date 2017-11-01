@@ -12,7 +12,7 @@ export class BasicPage {
 
   slides = [
     {
-      title: "Marnel's Code App!",
+      title: "Airport Codes",
       description: "This is a collection of <b>Alaska Airline</b> <br />Airport Codes to help new hires in memorizing.",
       image: "assets/img/alaska-logo.jpg",
     },
