@@ -19,7 +19,8 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { QuizPage } from '../pages/quiz/quiz';
 import { AirportlistPage } from '../pages/airportlist/airportlist';
 import { BasicPage } from '../pages/basic/basic';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { IataPage } from '../pages/iata/iata';
 
 
 @NgModule({
@@ -35,11 +36,13 @@ import { HttpModule } from '@angular/http';
     FlashCardComponent,
     QuizPage,
     AirportlistPage,
-    BasicPage
+    BasicPage,
+    IataPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    JsonpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -54,7 +57,8 @@ import { HttpModule } from '@angular/http';
     FlashcardPage,
     QuizPage,
     AirportlistPage,
-    BasicPage
+    BasicPage,
+    IataPage
   ],
   providers: [
     StatusBar,

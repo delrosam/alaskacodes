@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Jsonp } from '@angular/http';
+
 import 'rxjs/add/operator/map';
 
 
@@ -8,7 +9,8 @@ export class PeopleServiceProvider {
   data: any;
 
 
-  constructor(private http: Http){
+  constructor(private http: Http,
+    private _jsonp: Jsonp){
 
   }
 
@@ -23,21 +25,20 @@ export class PeopleServiceProvider {
       // We're using Angular HTTP provider to request the data,
       // then on the response, it'll map the JSON data to a parsed JS object.
       // Next, we process the data and resolve the promise with the new data.
-      //https://randomuser.me/api/?results=10
-      //https://api.themoviedb.org/3/search/movie?api_key=f8785f620fd6b030cbe5b2a1002bac1b&query=Jack+Reacher
-      //https://www.alaskaair.com/api/v1/AirportsLite/GetAllAirportsLite
-      ///discover/movie/remote?language=en&media_type=movie
-      this.http.get('https://api.themoviedb.org/4/list/21245?api_key=f8785f620fd6b030cbe5b2a1002bac1b')
+      this.http.get('/api'+'?api_key=dd6b6b8a-67d5-49f2-89b6-b730e44ab56a')
         .map(res => res.json())
         .subscribe(data => {
           // we've got back the raw data, now generate the core schedule data
           // and save the data for later reference
-          this.data = data.results;
-          console.log(this.data);
+          this.data = data.response;
+          
+          console.log(data.response);
+
           resolve(this.data);
         });
     });
   }
+
 
 //
 }
