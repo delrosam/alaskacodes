@@ -9,12 +9,14 @@
         Airports
       </ion-title>
     </ion-navbar>
+    <!-- Search Bar with getItems function -->
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>    
   </ion-header>
 
 
 <ion-content padding class="bg-style">
     <ion-list>
+      <!-- On click, goes to detailsPage and passes the individualAirport data -->
         <button ion-item *ngFor="let individualAirport of airportCollection" [navPush]="detailsPage" [navParams]="individualAirport">
           <!-- <ion-icon [name]="individualAirport.icon" item-left></ion-icon> -->
           <h2 style="color:#01426A;">{{ individualAirport.city}}</h2>

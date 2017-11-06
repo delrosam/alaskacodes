@@ -38,8 +38,8 @@ export class MyApp {
   }
 
   onLoad(page: any){
-    this.nav.setRoot(page);
-    this.menuCtrl.close();
+    this.nav.setRoot(page); // Sets root page to whichever menu item is selected
+    this.menuCtrl.close(); // Close Menu Option
   }
 
 }

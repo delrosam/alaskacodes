@@ -8,12 +8,12 @@ import { ViewController, NavParams } from "ionic-angular";
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+	
 	airportcode: string;
 	airportname: string;
 	city: string;
 	state: string;
 	countryfull: string;
-	// image: string;
 
 	constructor (
 		private viewCtrl: ViewController,
@@ -21,6 +21,7 @@ export class DetailPage {
 	}
 
 	ionViewDidLoad(){
+		// Gets the navParams passed from the airport list page.
 		this.airportcode = this.navParams.get('airportcode');
 		this.airportname = this.navParams.get('airportname');
 		this.city = this.navParams.get('city');
@@ -29,6 +30,7 @@ export class DetailPage {
 		// this.image = this.navParams.get('image');
 	}
 
+	// On the button close remove is set to false so that it does not get delete
 	onClose(remove = false){
 		this.viewCtrl.dismiss(remove);
 	}

@@ -6,23 +6,28 @@
 	</ion-header>
 	<ion-content>
 		<ion-list>
+			<!-- Menu Option for the Splash Page -->
 			<button ion-item (click)="onLoad(basicPage)">
 				<ion-icon color="codeBackground" name="plane" item-left></ion-icon>
 				Splash
 			</button>
-			<button ion-item (click)="onLoad(tabsPage)">
+			<!-- Menu Option for the Flashcard Page -->
+			<button ion-item (click)="onLoad(flashCard)">
 				<ion-icon color="codeBackground" name="photos" item-left></ion-icon>
 				Flashcards
 			</button>
-			<button ion-item (click)="onLoad(tabsPage)">
+			<!-- Menu Option for the Airport List Page -->
+			<button ion-item (click)="onLoad(airportList)">
 				<ion-icon color="codeBackground" name="list-box" item-left></ion-icon>
 				List
 			</button>
-			<button ion-item (click)="onLoad(tabsPage)">
+			<!-- Menu Option for the Quiz Page -->
+			<button ion-item (click)="onLoad(quizPage)">
 				<ion-icon color="codeBackground" name="create" item-left></ion-icon>
 				Quiz
 			</button>
-			<button ion-item (click)="onLoad(tabsPage)">
+			<!-- Menu Option for the Favorites Page -->
+			<button ion-item (click)="onLoad(favoritesPage)">
 				<ion-icon color="codeBackground" name="star" item-left></ion-icon>
 				Favorites
 			</button>
@@ -46,4 +51,5 @@
 	</ion-content>
 </ion-menu>
 
+<!-- Sets the Basic page as the rootpage -->
 <ion-nav [root]="basicPage" #nav></ion-nav>

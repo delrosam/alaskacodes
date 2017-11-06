@@ -12,7 +12,9 @@
 </ion-header>
 
 <ion-content padding class="bg-style">
+  <!-- Favorites list -->
   <ion-list>
+    <!-- Makes the list item slideable to display other options such as the delete button -->
     <ion-item-sliding *ngFor="let code of codes">
       <ion-item 
       [color]="getBackground()"
@@ -24,6 +26,7 @@
       <p>{{code.airportname | uppercase}}</p>
     </ion-item>
     <ion-item-options>
+      <!-- Delete button that displays after item on list is slid -->
       <button ion-button color="danger"
       (click)="onDeleteFromMyList(code)">
         <ion-icon name="trash"></ion-icon>

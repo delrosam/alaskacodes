@@ -10,6 +10,7 @@ export class BasicPage {
 
   tabsPage = TabsPage;
 
+  // Array of slides
   slides = [
     {
       title: "Airport Codes",

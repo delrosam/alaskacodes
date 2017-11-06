@@ -37,17 +37,19 @@ export class QuizPage {
 
 
   
-  
+  // Function to handle selected answer
   selectAnswer(btnNum: string, correctAnswer: string, selectedCode: string){
 
-
+      // If correct answer is 
       if(correctAnswer == selectedCode){
+        // Create a toast
         let toast = this.toastCtrl.create({
           message: 'CORRECT!',
           duration: 2000,
           position: 'top',
           cssClass: "correctToast"
         });
+        // Dismiss toast
         toast.onDidDismiss(() => {
           this.scoreTracker++;
           console.log(this.scoreTracker);
@@ -60,6 +62,7 @@ export class QuizPage {
         toast.present();
         
       }else{
+        // Disable button if the selected answer is wrong
         if(btnNum == "btn1"){
           this.disabled1 = true;
         }
@@ -72,6 +75,7 @@ export class QuizPage {
         if(btnNum == "btn4"){
           this.disabled4 = true;
         }
+        // Create an incorrect toast message
         let toast = this.toastCtrl.create({
           message: 'Incorrect. Please try again.',
           duration: 2000,
@@ -85,9 +89,8 @@ export class QuizPage {
   }
 
 
-
+  // Function to get new quiz from local list of questions and possible answers
   getQuizItem(){
-
     this.myCodes = [
       { code: "ABQ", city: "Albuquerque", a1: "ADQ", a2: "ANC", a3: "ACV", a4: "ABQ" },
       { code: "ACV", city: "Eureka", a1: "ADK", a2: "ACV", a3:"ADQ", a4: "ANC" },
@@ -218,7 +221,7 @@ export class QuizPage {
       { code: "ZLO", city: "Manzanillo", a1: "ZLO", a2: "ZIH", a3:"YYC", a4: "WRG" }
       ];
       
-
+    // Select Random object in array
     this.myCodes[Math.floor(Math.random() * this.myCodes.length)];
     this.randomQuiz = this.myCodes[Math.floor(Math.random() * this.myCodes.length)]; // this'll get the quote depending on your array length
     console.log(this.randomQuiz);

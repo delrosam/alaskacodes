@@ -10,4 +10,5 @@ import { AirportlistPage } from './airportlist';
     IonicPageModule.forChild(AirportlistPage),
   ],
 })
+
 export class AirportlistPageModule {}

@@ -12,12 +12,13 @@
 </ion-header>
 
 <ion-content padding class="bg-style">
-	<h3 text-center>Select A Region</h3>
+  <h3 text-center>Select A Region</h3>
+  <!-- List of airports -->
 	<ion-list>
-		<button ion-item *ngFor="let quoteGroup of quoteCollection" [navPush]="detailsPage" [navParams]="quoteGroup">
-			<ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
-			<h2>{{ quoteGroup.category | uppercase }}</h2>
-			<p>{{ quoteGroup.airports.length }} Airports</p>
+		<button ion-item *ngFor="let indivAirport of airportCollection" [navPush]="detailsPage" [navParams]="indivAirport">
+			<ion-icon [name]="indivAirport.icon" item-left></ion-icon>
+			<h2>{{ indivAirport.category | uppercase }}</h2>
+			<p>{{ indivAirport.airports.length }} Airports</p>
 		</button>
 	</ion-list>
 </ion-content>

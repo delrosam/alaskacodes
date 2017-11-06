@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-
 import { DetailsPage } from '../details/details';
-
-import allAirports from '../../data/airportcodes.data';
 import { Codes } from '../../data/airportcodes.interface';
+import allAirports from '../../data/airportcodes.data';
 
 
 @Component({
@@ -12,38 +10,41 @@ import { Codes } from '../../data/airportcodes.interface';
 })
 export class AirportlistPage{
 
-  searchQuery: string = '';
-  items: string[];
+  //Set airportCollection to type Codes(defined in dairportcodes.interface.ts)
   airportCollection: Codes[];
   
   detailsPage = DetailsPage;
   
   constructor(){
+    // Initialize data
     this.initializeItems();
   }
 
 
 
   initializeItems() {
+    // Sets airportCollection to all the data from airportcodes.data
     this.airportCollection = allAirports;
   }
 
   
+  //Function to filter list of airports according to the search bar value.
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
 
-    // set val to the value of the searchbar
-    let val = ev.target.value;
+    // Set val to the value of the searchbar
+    let searchbar_val = ev.target.value;
 
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
+    // Only filter if the value of search bar is not empty
+    if (searchbar_val && searchbar_val.trim() != '') {
+      // Return matching results
       this.airportCollection = this.airportCollection.filter((individualAirport: Codes) => {
-        return (individualAirport.airportcode.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
-                individualAirport.airportname.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
-                individualAirport.city.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
-                individualAirport.state.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
-                individualAirport.countryfull.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (individualAirport.airportcode.toLowerCase().indexOf(searchbar_val.toLowerCase()) > -1 ||
+                individualAirport.airportname.toLowerCase().indexOf(searchbar_val.toLowerCase()) > -1 ||
+                individualAirport.city.toLowerCase().indexOf(searchbar_val.toLowerCase()) > -1 ||
+                individualAirport.state.toLowerCase().indexOf(searchbar_val.toLowerCase()) > -1 ||
+                individualAirport.countryfull.toLowerCase().indexOf(searchbar_val.toLowerCase()) > -1);
       })
     }
   }

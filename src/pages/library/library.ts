@@ -11,11 +11,14 @@ import ports from '../../data/airports.data';
 })
 export class LibraryPage implements OnInit {
 
-	quoteCollection: {category: string, airports: Airport[], icon: string}[];
+	// Initialize variable
+	airportCollection: {category: string, airports: Airport[], icon: string}[];
+	
 	detailsPage = DetailsPage;
 
 	ngOnInit() {
-		this.quoteCollection = ports;
+		// Sets all ports from airports.data to airportCollection
+		this.airportCollection = ports;
 	}
 
 

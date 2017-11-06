@@ -9,6 +9,7 @@ import { SettingsService } from '../../services/settings';
 export class SettingsPage {
 	constructor(private settingsService: SettingsService){}
 
+	// Toggle to change background color
 	onToggle(toggle: Toggle){
 		this.settingsService.setBackground(toggle.checked);
 	}

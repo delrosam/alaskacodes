@@ -1,3 +1,4 @@
+// Local airport data - SHOULD BE REPLACED WITH API FEED
 export default [
   {
     airportname: "albuquerque international sunport",

@@ -15,6 +15,7 @@
 
 
 <ion-content padding  class="bg-style">
+  <!-- Flashcard component -->
   <flash-card>
     <div class="flash-card-front">{{randomQuote.code}}</div>
     <div class="flash-card-back">{{randomQuote.city}}</div>
@@ -26,6 +27,7 @@
       </ion-col>
       <ion-col col-4></ion-col>
       <ion-col col-4>
+          <!-- Next Button -->
           <button ion-button clear (click)="nextCard()" icon-right>Next<ion-icon name="arrow-dropright-circle"></ion-icon></button>
       </ion-col>
     </ion-row>

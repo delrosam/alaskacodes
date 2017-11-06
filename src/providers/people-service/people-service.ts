@@ -14,6 +14,7 @@ export class PeopleServiceProvider {
 
   }
 
+  // Function to load data from API
   load() {
     if (this.data) {
       // already loaded data

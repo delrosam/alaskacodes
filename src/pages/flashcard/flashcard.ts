@@ -15,9 +15,11 @@ export class FlashcardPage {
       }
 
       ionViewWillLoad(){
+        // On load, get next card.
         this.nextCard();
       }
 
+      // Function to get next card from local list of airport code.
       nextCard(){
         this.myCodes = [
           { code: "ABQ", city: "Albuquerque" },
@@ -150,6 +152,7 @@ export class FlashcardPage {
           ];
           
 
+        // Randomly select from the array above.
         this.myCodes[Math.floor(Math.random() * this.myCodes.length)];
         this.randomQuote = this.myCodes[Math.floor(Math.random() * this.myCodes.length)]; // this'll get the quote depending on your array length
         console.log(this.randomQuote);
